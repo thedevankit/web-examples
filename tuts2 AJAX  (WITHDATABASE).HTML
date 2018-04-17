@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple ajax example with databse </title>
+</head>
+
+<script type="text/javascript" src="j.js"></script>
+	<script type="text/javascript">
+
+
+		$(document).ready(function() {
+			$('#submit').click(function(event) {
+				event.preventDefault();
+					$.ajax({
+					url:"database.php",
+					method:"post",
+					data:$('form').serialize(),
+					dataType:"text",
+					success: function(strDate){
+						$("#show_data").text(strDate),
+						$("#form")[0].reset()
+					}
+				})
+			})
+
+		
+			
+		})
+	</script>
+
+<body>
+<center>
+<div>
+	<h1>Ajax form handling.</h1>
+</div>
+<div>
+	<h2 id="show_data"></h2>
+</div>
+
+<div>
+<br><br><br>
+	
+	<form method="post" id="form">
+
+		<b>Enter name: <input type="text" name="name"><br><br>
+		Enter email: <input type="text" name="email"><br><br>
+		Enter message:</b> <input type="text" name="message"><br><br>
+
+		<input type="submit" name="submit" id="submit" value="submit">
+
+	</form>
+
+</div>
+</center>
+</body>
+</html>

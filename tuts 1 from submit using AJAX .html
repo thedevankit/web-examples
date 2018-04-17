@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple ajax example </title>
+</head>
+
+<script type="text/javascript" src="j.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$.ajax({
+				url:"data.php",
+				data:"",
+				dataType:"text",
+				success: function(strDate){
+					$("#show_data").text(strDate)
+				}
+			})
+			// body...
+		})
+	</script>
+
+<body>
+<center>
+<div>
+	<h1>hello world in ajax</h1>
+</div>
+<div>
+	<h2 id="show_data"></h2>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java script from validataion</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<style type="text/css">
+/*
+ css for layout
+
+ internal css 
+*/
+	
+	.aks{
+
+		color:#000;
+		text-align:center;
+		margin-left:15px;
+
+
+	}
+ .a{
+ 	font-size:6px;
+ 	text-transform:uppercase;
+ 	text-shadow:10px;
+ }
+</style>
+<script type="text/javascript">
+	
+	function varify() {
+	
+		if (document.aks.name.value=="" || document.aks.email.value=="" ||document.aks.mono.value=="") {
+			alert("please enter value ");
+			document.aks.mono.focus();
+			return false;
+		}
+
+		if (document.aks.mono.value.length>10) {
+			alert("please enter Mobile number in proper order ")
+			document.aks.mono.focus();
+			return false;
+		}
+
+		if (document.aks.pass.value=="") {
+			alert("Enter password")
+			return false;		
+		}
+
+		if (document.aks.cpass.value=="") {
+			alert("please retype your password")
+			return false;		
+		}
+
+		if ((document.aks.pass.value)!= (document.aks.cpass.value))
+		 {
+			alert("Password Not Match")
+			return false;		
+		}
+
+	}
+</script>
+<body>
+<div class="container">
+	<div class="well">
+		<div class="nav">
+			<ul>
+				<li>	 				
+	 				<a href="home.html">
+	 					<div class="btn btn-lg btn-primary">
+	 						Home
+	 					</div>
+	 				</a> 
+	 				
+				</li>
+				<li>	 				
+	 				<a href="reg.html">
+	 					<div class="btn btn-lg btn-primary">
+	 						Registraion
+	 					</div>
+	 				</a> 
+	 				
+				</li>
+				 
+			</ul>
+		</div>
+	</div>
+	
+
+	<div class="row">
+		
+		<div class="col-xl-12 col-sm-12 col-md-12" >
+			<h1> Registraion From Using bootstrap and javascript validation</h1>
+			
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class=" row">
+			<div class="col-xl-12 col-sm-12 col-md-12">
+				<form   class="aks" name="aks" action="" method="post">
+					
+					<b>name:<input type="text" name="name" placeholder ="Enter your name" required autofocus><br><br></b>
+					<b>Country:<input type="text" name="country" value="India" disabled  required><br><br></b>
+					
+					<b>emil:<input type="email" name="email" placeholder ="Enter your email" required autofocus><br><br></b>
+					<b>Mobile Number: <input type="text" name="mono" placeholder ="Enter your mobile Number" maxlength="10" required autofocus></b><br><br>
+					Gender:<br>Male: <input type="checkbox" name="gender" value="male"> 
+					<br>
+					Female:<input type="checkbox" name="gender" value="female"> <br><br>
+
+					Password :<input type="password" name="pass" placeholder="Enter your password"><br><br>
+					Confrom Password <input type="password" name="cpass" placeholder="confrom your password"><br><br>
+
+					<input type="submit" onclick="varify(this)" value=" From submit" name="submit" >
+
+				</form>
+			</div>
+		</div>
+	</div>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>
